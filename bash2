@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $# == 0 ]]; then
-        echo "No argument supplied. Enter url or localfile"
+        echo "No argument supplied. Enter URL or localfile"
 
         read -p "URL or Filename: " fileName
         echo $fileName | grep "http*"
@@ -11,7 +11,7 @@ if [[ $# == 0 ]]; then
                 wget $fileName
                 if [[ $? == 0 ]]; then
                         file="legends.txt"
-                        echo "file download successful"
+                        echo "File download successful"
                 else
                         echo "File download unsuccessful"
                         exit 1
@@ -37,7 +37,7 @@ then
                 wget $fileName
                 if [[ $? == 0 ]]; then
                         file="legends.txt"
-                        echo "file download successful"
+                        echo "File download successful"
                 else
                         echo "Download Failed"
                         exit 1
